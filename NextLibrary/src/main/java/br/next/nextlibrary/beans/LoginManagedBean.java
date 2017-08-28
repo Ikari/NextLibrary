@@ -7,6 +7,7 @@ package br.next.nextlibrary.beans;
 
 import br.next.nextlibrary.model.Usuario;
 import br.next.nextlibrary.dal.UsuarioDAO;
+import java.io.Serializable;
 
 import javax.faces.context.FacesContext;
 import javax.faces.application.FacesMessage;
@@ -20,7 +21,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean(name="LoginManagedBean")
 @ViewScoped
-public class LoginManagedBean {
+public class LoginManagedBean implements Serializable {
     
     private UsuarioDAO dao = new UsuarioDAO();
     private Usuario usuario = new Usuario();
